@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //turnGPSOn();
-
-
-        WifiUtils.enableLog(true);
+        //WifiUtils.enableLog(true);
         new ConnectionManager(this).connectWithWAP("XyyZ", "welcome1234");
 
 
@@ -66,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+    //for later use ....
     private void turnGPSOn() {
         LocationRequest locationRequest = LocationRequest.create();
 
