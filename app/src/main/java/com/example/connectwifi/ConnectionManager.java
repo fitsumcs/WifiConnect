@@ -22,6 +22,7 @@ public class ConnectionManager {
 
 
 
+    //the fun tha connect with the AP
     public void connectWithWAP(String ssid, String pasworrd) {
 
         enableWifi();
@@ -45,6 +46,7 @@ public class ConnectionManager {
     }
 
 
+    //Enable wifi if not enabled
     public void enableWifi() {
         WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         if (!wifiManager.isWifiEnabled()) {
