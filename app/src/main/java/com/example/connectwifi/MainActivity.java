@@ -53,9 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        turnGPSOn();
+        //turnGPSOn();
+
 
         WifiUtils.enableLog(true);
+        new ConnectionManager(this).connectWithWAP("XyyZ", "welcome1234");
 
 
 
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         task.addOnSuccessListener(this, new OnSuccessListener<LocationSettingsResponse>() {
             @Override
             public void onSuccess(LocationSettingsResponse locationSettingsResponse) {
-                Log.d("GPS_main", "OnSuccess");
+                Log.e("GPS_main", "OnSuccess");
 
                 //This is the method that allows u to connect
                 //You Need to provide SSID and Password of the Access Point
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         task.addOnFailureListener(this, new OnFailureListener() {
             @Override
             public void onFailure(@NonNull final Exception e) {
-                Log.d("GPS_main", "GPS off");
+                Log.e("GPS_main", "GPS off");
                 // GPS off
                 if (e instanceof ResolvableApiException) {
                     ResolvableApiException resolvable = (ResolvableApiException) e;
@@ -115,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Activity.RESULT_CANCELED:
                     // User rejected turning on the GPS
+                    Toast.makeText(this, "You can not be connected to AP", Toast.LENGTH_SHORT).show();
+
                     break;
                 default:
                     break;
