@@ -55,6 +55,22 @@ public class MainActivity extends AppCompatActivity {
 
         //turnGPSOn();
         //WifiUtils.enableLog(true);
+
+       //  #########################################################
+
+        //Here .........
+
+        //This is the method that allows u to connect
+        //You Need to provide SSID and Password of the Access Point
+        /*         #
+                   #
+                   #
+                   #
+                #  #  #
+                   #
+         */
+
+        //  #########################################################
         new ConnectionManager(this).connectWithWAP("XyyZ", "welcome1234");
 
 
