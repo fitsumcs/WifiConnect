@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //for later use ....
+    /*
     private void turnGPSOn() {
         LocationRequest locationRequest = LocationRequest.create();
 
@@ -140,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    */
+
 
 
 
