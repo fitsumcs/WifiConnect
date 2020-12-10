@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 #  #  #
                    #
          */
-
         //  #########################################################
         new ConnectionManager(this).connectWithWAP("XyyZ", "welcome1234");
 
